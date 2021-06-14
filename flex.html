@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap 4 - CSS Flexbox - Container Properties</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        font-size: 62.5%;
+      }
+
+      body {
+        font-size: 2rem;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #fff;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        background: linear-gradient(
+          to right,
+          rgba(14, 124, 228, 0.5),
+          rgba(133, 231, 186, 0.8)
+        );
+        height: 50vh;
+      }
+
+      .item {
+        padding: 5rem;
+        background: #777;
+        margin: 0 1rem;
+        text-align: center;
+      }
+
+      .item-1 {
+        order: 1;
+        flex-grow: 1;
+      }
+
+      .item-3 {
+        align-self: flex-start;
+      }
+
+      .item-4 {
+        align-self: stretch;
+        flex-grow: 5;
+      }
+
+      .item-5 {
+        order: -1;
+        align-self: flex-end;
+      }
+
+      .container-2 {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        background: linear-gradient(
+          to right,
+          rgba(14, 124, 20, 0.5),
+          rgba(133, 231, 186, 0.8)
+        );
+        height: 50vh;
+      }
+
+      .item-6 {
+        width: 20rem;
+      }
+
+      .item-7 {
+      }
+
+      .item-8 {
+        width: 20rem;
+        flex-shrink: 5;
+      }
+
+      .item-9 {
+        flex-basis: 10rem;
+      }
+
+      .container-3 {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background: linear-gradient(
+          to right,
+          rgba(50, 124, 135, 0.5),
+          rgba(133, 231, 186, 0.8)
+        );
+        height: 50vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item item-1">1</div>
+      <div class="item item-2">2</div>
+      <div class="item item-3">3</div>
+      <div class="item item-4">4</div>
+      <div class="item item-5">5</div>
+    </div>
+
+    <div class="container-2">
+      <div class="item item-6">6</div>
+      <div class="item item-7">7</div>
+      <div class="item item-8">8</div>
+    </div>
+
+    <div class="container-2">
+      <div class="item item-9">9</div>
+      <div class="item item-10">10</div>
+      <div class="item item-11">11</div>
+    </div>
+
+    <div class="container-3">
+      <div class="item item-9">9</div>
+      <div class="item item-10">10</div>
+      <div class="item item-11">11</div>
+    </div>
+  </body>
+</html>
